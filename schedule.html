@@ -3,25 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schedule Service | Advanced Technology Heating & Cooling</title>
+    <title>Get Your Quote | Advanced Wind Services</title>
     <meta
       name="description"
-      content="Schedule AC and heating service with Advanced Technology Heating & Cooling."
+      content="Request AC repair, HVAC installation, ductwork, maintenance, or indoor air quality service from Advanced Wind Services."
     />
-    <link rel="canonical" href="https://www.advancedtechnologyhc.com/schedule.html" />
+    <link rel="canonical" href="https://advancedwindservices.com/schedule.html" />
   </head>
   <body>
     <div id="app">
       <header class="top-strip">
-        <p>call our office today : <a href="tel:4076755109">(407)-675-5109</a> <a href="tel:3213631397">(321)-363-1397</a></p>
+        <p>Southwest Florida HVAC service</p>
+        <div>
+          <a href="tel:2398260286">(239) 826-0286</a>
+          <a href="tel:3529016939">(352) 901-6939</a>
+        </div>
       </header>
 
       <nav class="main-nav" aria-label="Main navigation">
-        <a class="logo-link" href="/" aria-label="Advanced Technology Heating and Cooling home">
-          <img
-            src="https://static.wixstatic.com/media/4c54f0_485134430cee421bab5f4c32923b135f~mv2.jpg/v1/fill/w_499,h_120,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo-01.jpg"
-            alt="Advanced Technology Heating and Cooling"
-          />
+        <a class="logo-link" href="/" aria-label="Advanced Wind Services home">
+          <span class="logo-mark">AWS</span>
+          <span>
+            <strong>Advanced Wind Services</strong>
+            <small>License CAC1820228</small>
+          </span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
           <span></span>
@@ -31,30 +36,31 @@
         <div class="nav-links" id="site-menu">
           <a href="/">Home</a>
           <a href="/#services">Services</a>
+          <a href="/#offer">Special Offer</a>
           <a href="/gallery.html">Gallery</a>
           <a href="/#areas">Service Areas</a>
-          <a href="/#about">About Us</a>
-          <a class="book-link" href="/schedule.html">Book Now</a>
+          <a class="book-link" href="/schedule.html">Get Your Quote</a>
         </div>
       </nav>
 
       <main>
         <section class="booking-page">
           <div class="booking-heading">
-            <h1>Book Your AC & Heating Service</h1>
+            <p class="section-label">Request service</p>
+            <h1>Tell us what your system needs.</h1>
             <p>
-              Fill out the form below and our team will reach out shortly to confirm
-              your appointment.
+              Send the details and Advanced Wind Services will follow up to confirm
+              timing, availability, and the best next step.
             </p>
           </div>
 
           <form
             class="booking-form"
-            action="https://formsubmit.co/advancedtechhc@gmail.com"
+            action="https://formsubmit.co/advancedwindhc@gmail.com"
             method="POST"
             target="booking-submit-frame"
           >
-            <input type="hidden" name="_subject" value="New HVAC Appointment Request" />
+            <input type="hidden" name="_subject" value="New Advanced Wind Services Request" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off" />
@@ -75,28 +81,47 @@
             </label>
 
             <label>
-              Date of appointment wanted <span>(Required)</span>
+              Email
+              <input type="email" name="email" />
+            </label>
+
+            <label>
+              Preferred date <span>(Required)</span>
               <input type="date" name="appointment_date" required />
             </label>
 
             <label>
-              Time of appointment wanted <span>(Required)</span>
-              <input type="time" name="appointment_time" required />
+              Preferred time
+              <input type="time" name="appointment_time" />
             </label>
 
             <label>
-              Address <span>(Required)</span>
+              Service address <span>(Required)</span>
               <input type="text" name="address" required />
             </label>
 
             <label>
-              Description of services wanted <span>(Required)</span>
+              Service needed <span>(Required)</span>
+              <select name="service_type" required>
+                <option value="">Choose a service</option>
+                <option>AC repair</option>
+                <option>AC or heating installation</option>
+                <option>Routine maintenance</option>
+                <option>Duct cleaning or sanitizing</option>
+                <option>Duct replacement or sealing</option>
+                <option>Blown insulation</option>
+                <option>Emergency service</option>
+              </select>
+            </label>
+
+            <label class="full-field">
+              Message <span>(Required)</span>
               <textarea name="service_description" rows="6" required></textarea>
             </label>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Submit Request</button>
             <p class="form-note">
-              Need help? Please contact the office directly at <a href="tel:3213631397">(321) 363-1397</a>.
+              Prefer to call? Reach the office at <a href="tel:2398260286">(239) 826-0286</a>.
             </p>
           </form>
           <iframe class="hidden-frame" name="booking-submit-frame" title="Form submission"></iframe>
@@ -106,7 +131,7 @@
       <div class="submission-modal" role="dialog" aria-modal="true" aria-labelledby="submission-title" hidden>
         <div class="submission-modal-card">
           <h2 id="submission-title">Thank you for submitting.</h2>
-          <p>Our team will reach out to you shortly.</p>
+          <p>Advanced Wind Services will reach out shortly.</p>
           <button type="button" class="modal-close">Close</button>
         </div>
       </div>
