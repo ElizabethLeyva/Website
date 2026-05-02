@@ -41,10 +41,10 @@
       <main>
         <section class="booking-page">
           <div class="booking-heading">
-            <h1>Schedule Your AC & Heating Service</h1>
+            <h1>Book Your AC & Heating Service</h1>
             <p>
-              Fill out the form below and our team will call you shortly to confirm
-              your appointment details.
+              Fill out the form below and our team will reach out shortly to confirm
+              your appointment.
             </p>
           </div>
 
@@ -52,11 +52,11 @@
             class="booking-form"
             action="https://formsubmit.co/advancedtechhc@gmail.com"
             method="POST"
+            target="booking-submit-frame"
           >
-            <input type="hidden" name="_subject" value="New HVAC Service Request" />
+            <input type="hidden" name="_subject" value="New HVAC Appointment Request" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="https://www.advancedtechnologyhc.com/thank-you.html" />
             <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off" />
 
             <label>
@@ -75,24 +75,23 @@
             </label>
 
             <label>
-              Desired Booking Date <span>(Required)</span>
-              <input type="date" name="booking_date" required />
+              Date of appointment wanted <span>(Required)</span>
+              <input type="date" name="appointment_date" required />
             </label>
 
-            <fieldset>
-              <legend>Type of Service <span>(Required)</span></legend>
-              <div class="service-options">
-                <label><input type="checkbox" name="service[]" value="Installation" /> Installation</label>
-                <label><input type="checkbox" name="service[]" value="AC Repair" /> AC Repair</label>
-                <label><input type="checkbox" name="service[]" value="Maintenance" /> Maintenance</label>
-                <label><input type="checkbox" name="service[]" value="Ductwork Cleaning / Repair" /> Ductwork Cleaning / Repair</label>
-                <label><input type="checkbox" name="service[]" value="Other" /> Other</label>
-              </div>
-            </fieldset>
+            <label>
+              Time of appointment wanted <span>(Required)</span>
+              <input type="time" name="appointment_time" required />
+            </label>
 
             <label>
-              Additional Notes / Description of issues
-              <textarea name="notes" rows="6"></textarea>
+              Address <span>(Required)</span>
+              <input type="text" name="address" required />
+            </label>
+
+            <label>
+              Description of services wanted <span>(Required)</span>
+              <textarea name="service_description" rows="6" required></textarea>
             </label>
 
             <button type="submit">Submit</button>
@@ -100,8 +99,17 @@
               Submissions are sent to advancedtechhc@gmail.com. For immediate help, call us directly.
             </p>
           </form>
+          <iframe class="hidden-frame" name="booking-submit-frame" title="Form submission"></iframe>
         </section>
       </main>
+
+      <div class="submission-modal" role="dialog" aria-modal="true" aria-labelledby="submission-title" hidden>
+        <div class="submission-modal-card">
+          <h2 id="submission-title">Thank you for submitting.</h2>
+          <p>Our team will reach out to you shortly.</p>
+          <button type="button" class="modal-close">Close</button>
+        </div>
+      </div>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

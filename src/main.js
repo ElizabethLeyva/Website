@@ -149,3 +149,27 @@ if (carousel) {
   setActiveReview(0);
   restartAutoAdvance();
 }
+
+const bookingForm = document.querySelector('.booking-form');
+const submissionModal = document.querySelector('.submission-modal');
+const modalClose = document.querySelector('.modal-close');
+
+if (bookingForm && submissionModal && modalClose) {
+  bookingForm.addEventListener('submit', () => {
+    window.setTimeout(() => {
+      submissionModal.hidden = false;
+      modalClose.focus();
+      bookingForm.reset();
+    }, 650);
+  });
+
+  modalClose.addEventListener('click', () => {
+    submissionModal.hidden = true;
+  });
+
+  submissionModal.addEventListener('click', (event) => {
+    if (event.target === submissionModal) {
+      submissionModal.hidden = true;
+    }
+  });
+}
