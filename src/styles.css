@@ -349,6 +349,8 @@ h3 {
 }
 
 .service-grid span {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -359,6 +361,11 @@ h3 {
   background: var(--sky);
   color: var(--navy);
   font-weight: 800;
+}
+
+.service-grid h3 {
+  position: relative;
+  z-index: 1;
 }
 
 .service-grid p {
@@ -1358,11 +1365,24 @@ h3 {
   }
 
   .service-grid,
-  .service-area,
   .offer,
   .about,
   .site-footer,
   .footer-details {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-strip {
+    grid-template-columns: 1fr;
+    margin-top: -36px;
+  }
+
+  .trust-strip article {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .service-area {
     grid-template-columns: 1fr;
   }
 
@@ -1499,7 +1519,11 @@ h3 {
 
   .services {
     width: min(100% - 24px, 1120px);
-    padding: 58px 0 66px;
+    padding: 72px 0 66px;
+  }
+
+  .trust-strip {
+    width: min(100% - 24px, 1120px);
   }
 
   .service-grid {
