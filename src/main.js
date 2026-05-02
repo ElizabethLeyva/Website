@@ -149,13 +149,3 @@ if (carousel) {
   setActiveReview(0);
   restartAutoAdvance();
 }
-
-const bookingForm = document.querySelector('.booking-form');
-
-if (bookingForm) {
-  bookingForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const note = bookingForm.querySelector('.form-note');
-    note.textContent = 'Thanks. This preview form is ready to connect to your booking/email system.';
-  });
-}

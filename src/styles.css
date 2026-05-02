@@ -660,6 +660,14 @@ h3 {
   gap: 24px;
 }
 
+.hidden-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
 .booking-form label,
 .booking-form legend {
   color: #000000;
@@ -745,6 +753,27 @@ h3 {
   color: var(--muted);
   font-size: 0.92rem;
   text-align: center;
+}
+
+.thank-you-page {
+  display: grid;
+  justify-items: center;
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 90px 0 110px;
+  text-align: center;
+}
+
+.thank-you-page h1 {
+  margin-bottom: 18px;
+  font-size: clamp(3rem, 7vw, 6rem);
+}
+
+.thank-you-page p:not(.section-label) {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 1.18rem;
+  line-height: 1.6;
 }
 
 .about {

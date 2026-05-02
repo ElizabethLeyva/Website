@@ -48,7 +48,17 @@
             </p>
           </div>
 
-          <form class="booking-form">
+          <form
+            class="booking-form"
+            action="https://formsubmit.co/advancedtechhc@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New HVAC Service Request" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://www.advancedtechnologyhc.com/thank-you.html" />
+            <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off" />
+
             <label>
               First name <span>(Required)</span>
               <input type="text" name="first_name" required />
@@ -72,11 +82,11 @@
             <fieldset>
               <legend>Type of Service <span>(Required)</span></legend>
               <div class="service-options">
-                <label><input type="checkbox" name="service" value="Installation" /> Installation</label>
-                <label><input type="checkbox" name="service" value="AC Repair" /> AC Repair</label>
-                <label><input type="checkbox" name="service" value="Maintenance" /> Maintenance</label>
-                <label><input type="checkbox" name="service" value="Ductwork Cleaning / Repair" /> Ductwork Cleaning / Repair</label>
-                <label><input type="checkbox" name="service" value="Other" /> Other</label>
+                <label><input type="checkbox" name="service[]" value="Installation" /> Installation</label>
+                <label><input type="checkbox" name="service[]" value="AC Repair" /> AC Repair</label>
+                <label><input type="checkbox" name="service[]" value="Maintenance" /> Maintenance</label>
+                <label><input type="checkbox" name="service[]" value="Ductwork Cleaning / Repair" /> Ductwork Cleaning / Repair</label>
+                <label><input type="checkbox" name="service[]" value="Other" /> Other</label>
               </div>
             </fieldset>
 
@@ -87,7 +97,7 @@
 
             <button type="submit">Submit</button>
             <p class="form-note">
-              This preview form is not connected yet. Call us directly for immediate scheduling.
+              Submissions are sent to advancedtechhc@gmail.com. For immediate help, call us directly.
             </p>
           </form>
         </section>
