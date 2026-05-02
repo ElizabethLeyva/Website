@@ -693,6 +693,10 @@ h3 {
   margin-left: auto;
 }
 
+.reviews .section-label {
+  font-size: 1rem;
+}
+
 .review-carousel {
   position: relative;
   display: grid;
