@@ -236,6 +236,22 @@ h3 {
   color: var(--navy);
 }
 
+.outline-button.light {
+  background: #ffffff;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.hero-actions .primary-button,
+.hero-actions .outline-button {
+  margin-top: 0;
+}
+
 .services {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
@@ -1259,6 +1275,10 @@ h3 {
   .outline-button,
   .deal-button {
     width: 100%;
+  }
+
+  .hero-actions {
+    gap: 10px;
   }
 
   .services {
