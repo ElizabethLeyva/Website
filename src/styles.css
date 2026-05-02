@@ -690,6 +690,10 @@ h3 {
   line-height: 1.45;
 }
 
+.mobile-label {
+  display: none;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1775,7 +1779,15 @@ h3 {
   }
 
   .preview-gallery {
-    grid-template-columns: 1fr;
+    display: none;
+  }
+
+  .gallery-button .desktop-label {
+    display: none;
+  }
+
+  .gallery-button .mobile-label {
+    display: inline;
   }
 
   .gallery-grid figure,
