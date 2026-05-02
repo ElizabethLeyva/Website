@@ -229,3 +229,91 @@ if (galleryImages.length) {
     }
   });
 }
+
+const addressInput = document.querySelector('#service-address');
+
+if (addressInput) {
+  const addressSuggestions = document.createElement('div');
+  addressSuggestions.id = 'address-suggestions';
+  addressSuggestions.className = 'address-suggestions';
+  addressSuggestions.hidden = true;
+  addressInput.after(addressSuggestions);
+
+  const serviceCities = [
+    'Sanford, FL 32773',
+    'Lake Mary, FL',
+    'Longwood, FL',
+    'Winter Springs, FL',
+    'Oviedo, FL',
+    'Orlando, FL',
+    'Apopka, FL',
+    'Winter Garden, FL',
+    'Groveland, FL',
+    'Clermont, FL',
+    'Leesburg, FL',
+    'Haines City, FL',
+    'Davenport, FL',
+    'Lakeland, FL',
+    'Deltona, FL',
+    'DeLand, FL',
+    'Daytona Beach, FL',
+    'Ocala, FL',
+  ];
+
+  function hideAddressSuggestions() {
+    addressSuggestions.hidden = true;
+    addressInput.setAttribute('aria-expanded', 'false');
+  }
+
+  function showAddressSuggestions() {
+    const value = addressInput.value.trim();
+
+    if (value.length < 2) {
+      hideAddressSuggestions();
+      return;
+    }
+
+    const lowerValue = value.toLowerCase();
+    const hasStreetNumber = /^\d/.test(value);
+    const suggestions = serviceCities
+      .filter((city) => city.toLowerCase().includes(lowerValue) || hasStreetNumber)
+      .slice(0, 7)
+      .map((city) => (hasStreetNumber && !value.includes(',') ? `${value}, ${city}` : city));
+
+    if (!suggestions.length) {
+      hideAddressSuggestions();
+      return;
+    }
+
+    addressSuggestions.innerHTML = '';
+
+    suggestions.forEach((suggestion) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = suggestion;
+      button.addEventListener('click', () => {
+        addressInput.value = suggestion;
+        hideAddressSuggestions();
+        addressInput.focus();
+      });
+      addressSuggestions.append(button);
+    });
+
+    addressSuggestions.hidden = false;
+    addressInput.setAttribute('aria-expanded', 'true');
+  }
+
+  addressInput.addEventListener('input', showAddressSuggestions);
+  addressInput.addEventListener('focus', showAddressSuggestions);
+  addressInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      hideAddressSuggestions();
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!addressInput.contains(event.target) && !addressSuggestions.contains(event.target)) {
+      hideAddressSuggestions();
+    }
+  });
+}

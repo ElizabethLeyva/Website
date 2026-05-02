@@ -84,9 +84,19 @@
               <input type="time" name="appointment_time" required />
             </label>
 
-            <label>
+            <label class="address-field">
               Address <span>(Required)</span>
-              <input type="text" name="address" required />
+              <input
+                id="service-address"
+                type="text"
+                name="address"
+                placeholder="Start typing your street address"
+                autocomplete="street-address"
+                aria-autocomplete="list"
+                aria-expanded="false"
+                aria-controls="address-suggestions"
+                required
+              />
             </label>
 
             <label>
