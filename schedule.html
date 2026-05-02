@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Service | Advanced Technology Heating & Cooling</title>
+    <meta
+      name="description"
+      content="Schedule AC and heating service with Advanced Technology Heating & Cooling."
+    />
+    <link rel="canonical" href="https://www.advancedtechnologyhc.com/schedule.html" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="top-strip">
+        <p>call our office today : <a href="tel:4076755109">(407)-675-5109</a> <a href="tel:3213631397">(321)-363-1397</a></p>
+      </header>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="logo-link" href="/" aria-label="Advanced Technology Heating and Cooling home">
+          <img
+            src="https://static.wixstatic.com/media/4c54f0_485134430cee421bab5f4c32923b135f~mv2.jpg/v1/fill/w_499,h_120,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo-01.jpg"
+            alt="Advanced Technology Heating and Cooling"
+          />
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="site-menu">
+          <a href="/">Home</a>
+          <a href="/#services">Services</a>
+          <a href="/gallery.html">Gallery</a>
+          <a href="/#areas">Service Areas</a>
+          <a href="/#about">About Us</a>
+          <a class="book-link" href="/schedule.html">Book Now</a>
+        </div>
+      </nav>
+
+      <main>
+        <section class="booking-page">
+          <div class="booking-heading">
+            <h1>Schedule Your AC & Heating Service</h1>
+            <p>
+              Fill out the form below and our team will call you shortly to confirm
+              your appointment details.
+            </p>
+          </div>
+
+          <form class="booking-form">
+            <label>
+              First name <span>(Required)</span>
+              <input type="text" name="first_name" required />
+            </label>
+
+            <label>
+              Last name <span>(Required)</span>
+              <input type="text" name="last_name" required />
+            </label>
+
+            <label>
+              Phone <span>(Required)</span>
+              <input type="tel" name="phone" required />
+            </label>
+
+            <label>
+              Desired Booking Date <span>(Required)</span>
+              <input type="date" name="booking_date" required />
+            </label>
+
+            <fieldset>
+              <legend>Type of Service <span>(Required)</span></legend>
+              <div class="service-options">
+                <label><input type="checkbox" name="service" value="Installation" /> Installation</label>
+                <label><input type="checkbox" name="service" value="AC Repair" /> AC Repair</label>
+                <label><input type="checkbox" name="service" value="Maintenance" /> Maintenance</label>
+                <label><input type="checkbox" name="service" value="Ductwork Cleaning / Repair" /> Ductwork Cleaning / Repair</label>
+                <label><input type="checkbox" name="service" value="Other" /> Other</label>
+              </div>
+            </fieldset>
+
+            <label>
+              Additional Notes / Description of issues
+              <textarea name="notes" rows="6"></textarea>
+            </label>
+
+            <button type="submit">Submit</button>
+            <p class="form-note">
+              This preview form is not connected yet. Call us directly for immediate scheduling.
+            </p>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
