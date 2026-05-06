@@ -972,10 +972,10 @@ h3 {
   display: none;
 }
 
-.address-suggestions button {
+.booking-form .address-suggestions button {
   display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
-  gap: 10px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
   align-items: center;
   min-height: auto;
   padding: 12px;
@@ -992,27 +992,19 @@ h3 {
   box-shadow: none;
 }
 
-.address-suggestions button:hover,
-.address-suggestions button:focus {
+.booking-form .address-suggestions button:hover,
+.booking-form .address-suggestions button:focus {
   outline: none;
   background: #f5f5f5;
   color: #111111;
 }
 
-.address-suggestions button + button {
+.booking-form .address-suggestions button + button {
   border-top: 1px solid #eceff3;
 }
 
 .suggestion-pin {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border-radius: 999px;
-  background: #f1f3f4;
-  color: #3c4043;
-  font-size: 1rem;
-  font-weight: 900;
+  display: none;
 }
 
 .suggestion-copy {
@@ -1081,11 +1073,12 @@ h3 {
   background: var(--orange-dark);
 }
 
-.address-suggestions button,
-.address-suggestions button:hover,
-.address-suggestions button:focus {
+.booking-form .address-suggestions button,
+.booking-form .address-suggestions button:hover,
+.booking-form .address-suggestions button:focus {
   box-shadow: none;
   text-transform: none;
+  background-image: none;
 }
 
 .form-note {
